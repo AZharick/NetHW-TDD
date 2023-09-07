@@ -14,4 +14,16 @@ public class PhoneBookTest {
       final int factResult = book.getListSize();
       Assertions.assertEquals(expected, factResult);
    }
+
+   @Test
+   public void testFindByNumber() {
+      PhoneBook book = new PhoneBook();
+      final String name = "Alex";
+      final String number = "8-999-111-22-33";
+      book.add(name, number);
+
+      final String expected = "Alex";
+      final String factResult = book.findByNumber("8-999-111-22-33");
+      Assertions.assertEquals(expected, factResult);
+   }
 }
