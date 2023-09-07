@@ -5,7 +5,8 @@ public class PhoneBook {
    private Map<String, String> map = new HashMap<>();
 
    public int add(String name, String phoneNumber) {
-      return 0;
+      map.putIfAbsent(name, phoneNumber);
+      return this.getListSize();
    }
 
    public int getListSize() {
