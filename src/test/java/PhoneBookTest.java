@@ -26,4 +26,19 @@ public class PhoneBookTest {
       final String factResult = book.findByNumber("8-999-111-22-33");
       Assertions.assertEquals(expected, factResult);
    }
+
+   @Test
+   public void testFindByName() {
+      PhoneBook book = new PhoneBook();
+      final String name = "Alex";
+      final String number = "123456";
+      book.add(name, number);
+
+      final String expected = "123456";
+      final String factResult = book.findByName("Alex");
+      Assertions.assertEquals(expected, factResult);
+   }
+
+
+
 }
