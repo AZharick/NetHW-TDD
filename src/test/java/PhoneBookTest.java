@@ -39,6 +39,20 @@ public class PhoneBookTest {
       Assertions.assertEquals(expected, factResult);
    }
 
+   @Test
+   public void testPrintAllNames() {
+      PhoneBook book = new PhoneBook();
+      final String name1 = "Alex";
+      final String number1 = "111";
+      book.add(name1, number1);
 
+      final String name2 = "Mary";
+      final String number2 = "111";
+      book.add(name2, number2);
+
+      final String expected = "Alex, Mary";
+      final String factResult = book.printAllNames();
+      Assertions.assertEquals(expected, factResult);
+   }
 
 }

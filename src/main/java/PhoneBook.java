@@ -4,6 +4,10 @@ import java.util.Map;
 public class PhoneBook {
    private Map<String, String> map = new HashMap<>();
 
+   public String printAllNames() {
+      return null;
+   }
+
    public String findByNumber(String value) {
       return map.entrySet().stream()
               .filter(entry -> value.equals(entry.getValue()))
