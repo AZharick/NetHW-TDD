@@ -1,11 +1,15 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
    private Map<String, String> map = new HashMap<>();
 
    public String printAllNames() {
-      return null;
+      Set<String> names = map.keySet();
+      List<String> list = names.stream()
+              .sorted(Comparator.naturalOrder())
+              .collect(Collectors.toList());
+      return list.toString();
    }
 
    public String findByNumber(String value) {

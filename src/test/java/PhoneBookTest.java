@@ -50,7 +50,7 @@ public class PhoneBookTest {
       final String number2 = "111";
       book.add(name2, number2);
 
-      final String expected = "Alex, Mary";
+      final String expected = "[Alex, Mary]";
       final String factResult = book.printAllNames();
       Assertions.assertEquals(expected, factResult);
    }
